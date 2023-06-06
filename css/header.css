@@ -14,6 +14,12 @@
     background-color: #4d4d4d;
     position: relative;
   }
+
+  @media screen and (min-width: 600px) {
+    .nav {
+      z-index: 1000;
+    }
+  }
   
   .nav > .nav-header {
     display: inline;
@@ -110,12 +116,6 @@
     background-color: green;
   }
 
-  .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100; 
-  }
 
   #knaptekst2 {
     color: white;

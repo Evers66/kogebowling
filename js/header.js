@@ -1,12 +1,13 @@
-window.onscroll = function() {makeSticky()};
-
-var header = document.querySelector(".nav");
-var sticky = header.offsetTop;
-
-function makeSticky() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
+window.addEventListener("scroll", function() {
+  let windowWidth = window.innerWidth;
+  // Only run the script if in desktop view
+  if(windowWidth > 600) {
+      let nav = document.getElementById('myNav');
+      if(window.pageYOffset > nav.offsetTop) {
+          nav.style.position = "fixed";
+          nav.style.top = "0";
+      } else {
+          nav.style.position = "relative";
+      }
   }
-}
+});
