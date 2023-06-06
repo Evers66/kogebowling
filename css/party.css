@@ -11,6 +11,10 @@
     object-fit: cover;
 }
 
+#pdesc {
+    font-size: 22px;
+}
+
 .overlay2 {
     position: absolute;
     top: 0;
@@ -22,7 +26,7 @@
 
 .content2 {
     position: absolute;
-    top: 6%;
+    top: 9%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
@@ -45,8 +49,7 @@
 
 .btn2 {
     padding: 10px 20px;
-    color: rgb(0, 0, 0);
-    background: #ffffff;
+    color: white;
     border: none;
     cursor: pointer;
     transition: background 0.3s;
@@ -55,6 +58,8 @@
     padding: 15px;
     font-size: 20px;
     font-weight: 600;
+    background-color: red;
+    margin-top: 10px;
 }
 
 .btn2:hover {
@@ -66,13 +71,18 @@
     .image-section2 {
         height: auto;
     }
-    .content2 h1 {
-        font-size: 32px;
+    .content2 h1  {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    #pdesc  {
+        font-size: 15px;
         margin-bottom: 30px;
     }
 
     .content2 {
-        top: 2%; 
+        top: 5.5%; 
     }
     .btn2 {
         padding: 8px 16px;
@@ -131,99 +141,71 @@
       flex: 1 0 100%;
     }
   }
-  
-  /* CTA Sektion slut */
 
-  /* Åbningstider */
 
-  #aabningsoverskrift {
-    text-align: center;
-    margin-top: 80px;
-  }
-  
-  .aabningstider {
+  .pakkeAftaler {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    text-align: center;
-    margin: 0 auto;
-    padding: 0 8%;  
-  }
-  
-  .dag {
-    flex: 1 0 10%; 
-    margin: 0.5%;
-    padding: 1%;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-sizing: border-box;
-  }
-  
-  @media (max-width: 600px) {
-    .dag {
-      flex: 1 0 100%;
-      margin: 1% 0;
-    }
-  }
-  
-
-  .aabningstider {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    text-align: center;
-    margin: 0 auto;
-    padding: 0 5%;
-  }
-  
-  .dag {
-    flex: 1 0 10%;
-    margin: 0.5%;
-    padding: 1%;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-sizing: border-box;
-  }
-  
-  .centreret-knap-container {
-    flex-basis: 100%;
-    display: flex;
     justify-content: center;
-    margin-top: 20px;
+    align-items: center;
+    text-align: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background-image: url('/img/party2.png'); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    margin-top: 30px;
+    padding: 100px;
+}
+
+
+  
+  .pakke {
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: white;
+  }
+
+  
+  .pakke.raekke {
+    flex: 1 0 40%;
   }
   
-  .centreret-knap {
-    padding: 10px 20px;
-    font-family: kumbh sans;
-    border: none;
-    background-color: #349c4e;
+  .pakke.sidste {
+    flex: 1 0 80%;
+  }
+  
+  .pakke:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+  
+  .gronKnap {
+    background-color: green;
     color: white;
-    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
   }
   
-  .centreret-knap:hover {
-    background-color: #55aa6a;
-  }
-  
-  @media (max-width: 600px) {
-    .dag {
+  @media (max-width: 768px) {
+    .pakke.raekke, .pakke.sidste {
       flex: 1 0 100%;
-      margin: 1% 0;
     }
   }
   
-  /* Åbningstider Slut */
-
-  /* Billede med tekst */
-
-
   .opdelt-sektion {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     margin-top: 100px;
+    margin-bottom: 60px;
   }
   
   .opdelt-venstre {
@@ -284,112 +266,4 @@
       max-height: 150px;
     }
   }
-  
-  /* Billede med tekst slut */
-
-  /* 3 CTA Bokse */
-
-  .cta-sektion {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 100px; 
-    margin-top: 150px;
-    
-  }
-  
-  .cta-boks {
-    flex: 0 0 30%;
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 20px;
-    height: 500px;
-    border-radius: 10px;
-    max-width: 400px;
-  }
-  
-  .cta-link {
-    display: block;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-  }
-  
-  .cta-indhold {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    text-align: center;
-    padding-top: 100px;
-    border-radius: 10px;
-    height: 500px;
-  }
-  
-  .cta-titel {
-    color: white;
-    font-size: 35px;
-    margin: 0;
-    height: 500px;
-  }
-  
-  @media (max-width: 600px) {
-    .cta-boks {
-      flex-basis: 100%;
-    }
-  }
-
-  .cta-boks:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
-  }
-  
-    /* 3 CTA Bokse slut */
-
-    /* Tekstfelt */
-
-
-
-    .tekst-sektion {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 20vh;
-        margin-top: 50px;
-        margin-bottom: 50px;
-      }
-      
-      .tekst-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-      
-      .tekst-titel {
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 10px;
-      }
-      
-      .tekst-brodtekst {
-        font-size: 16px;
-        margin-bottom: 20px;
-      }
-      
-      .tekst-knap {
-        padding: 10px 20px;
-        border: none;
-        background-color: #349c4e;
-        color: white;
-        font-size: 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-family: kumbh sans;
-      }
-      
-      @media (max-width: 600px) {
-        .tekst-sektion {
-          padding: 0 20px;
-        }
-      }
-      
   
